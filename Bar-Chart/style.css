@@ -1,0 +1,50 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    background-color: #708090; 
+}
+#title{
+    font-size: 40px;
+    margin-top: 15px;
+}
+svg .bar{
+    fill: #33adff;
+}
+svg .bar:hover{
+    fill: white;
+}
+#tooltip{
+    position: relative;
+    display: flex;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    background-color: #a4c2e1;
+    width: 155px;
+    height: 58px;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+}
+#container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    min-height: 600px;
+    min-width: 900px;
+    text-align: center;
+    box-shadow: 2px 2px 20px;
+}
+#info{
+    font-size: 13px;
+}
+#gdp{
+    font-size: 17px;
+}

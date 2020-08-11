@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    }
+#legend text{
+    font-size: 10px;
+}
+#tooltip{
+    position: absolute;
+    background-color: lightsteelblue;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+svg{
+    padding-bottom: 10px;
+}

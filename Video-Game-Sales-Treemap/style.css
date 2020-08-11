@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+svg text{
+    pointer-events: none;
+}
+#title{
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+#description{
+    padding-bottom: 20px;
+}
+#tree-map{
+    font-size: 11px;
+    padding-bottom: 15px;
+}
+#tooltip{
+    position: absolute;
+    background-color: rgba(255, 255, 204, 0.95);
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    opacity: 0;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px 1px#A9A9A9;
+    pointer-events: none;
+}
+#legend{
+    padding-bottom: 20px;
+}

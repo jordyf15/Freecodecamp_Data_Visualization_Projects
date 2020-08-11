@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    font-family: Open Sans, sans-serif;
+}
+#header{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+}
+svg{
+    margin-left: 10px;
+    stroke-width: 2px;
+}
+.tick text{
+    font-size: 16px;
+}
+#tooltip{
+    position: absolute;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    opacity: 0;
+    line-height: 22px;
+    border-radius: 7px;
+    pointer-events: none;
+}
