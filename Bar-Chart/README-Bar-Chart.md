@@ -65,6 +65,7 @@ Explanation:
 The first line with the fetch(URL) makes a GET request to the URL that was specified. After that it return a promise.  
 After the promise is returned and the request was successfull it will execute the then method which takes the response and converts it to JSON format. This also return a promise.  
 This promise is handle by the next then method where the argument is the JSON object that we need. In here we might want to save the JSON object to a variable and also save part of the JSON object that you needed to make axis to an array. The reason for this will be explained later.  
+  
 2. Now that we have the data we can start making the bar chart. The first thing we'll do is making the svg, since rect element and the axis itself needs to appended on an svg.  
 In my source code the svg was created like this:  
 ```
@@ -77,7 +78,7 @@ In my source code the svg was created like this:
     .style('background-color','white');
     ```  
 Explanation:  
-First we put the width and height to a variable so if we need to change it, we only need to change it in one place instead of going through the whole code. Then you append an svg to the body or an element you created in the body. In here i append it to the div element with an id container. Then you give the attribute of width and height and also the background color for the svg.
+First we put the width and height to a variable so if we need to change it, we only need to change it in one place instead of going through the whole code. Then you append an svg to the body or an element you created in the body. In here i append it to the div element with an id container. Then you give the attribute of width and height and also the background color for the svg.  
 3. Now we create the scales for the xAxis, yAxis and also for the yBar. The reason another scale for the yAxis is needed will be explained later.  
   Scale for yBar:  
   ```
@@ -104,8 +105,8 @@ var xScale=d3.scaleTime()
         parseInt(xAxisDataSet[xAxisDataSet.length-1].split('-')[2]))])
     .range([0,width-100]);
 ```
-In here we use scale time since the data was in months and years. So it will be eazier if we use scale time. The two previous scale uses scaleLinear.The scale time for the domain uses date objects for the domain.
-
+In here we use scale time since the data was in months and years. So it will be eazier if we use scale time. The two previous scale uses scaleLinear.The scale time for the domain uses date objects for the domain.  
+  
 4. Now that we have created the scales we will create the axis for both y and x.
 ```
 var y_axis=d3.axisLeft()
@@ -126,6 +127,7 @@ var x_axis=d3.axisBottom()
     .call(x_axis);
 ```
 First we make the axis by using the scales we created earlier. After that we made a group to append both axis y and x, this is to make it more organized. Then we created two groups to contain each of the axis by calling each axis that we created before.  
+  
 5. Now we will create the bar chart.  
 First we will create the all the rects and also its attribute according to its data
 ```
@@ -156,7 +158,7 @@ g.selectAll('rect')
     })
 ```
 we select the g we created to contain both the axis of x and y.Then we selectAll rects elements there. Since there is no rect elements it will return nothing. Then we put the data we get from the fetch method and enter to create the numbers of rects needed (if the previous select all rect return some rect than it will only enter new rects to fill the lacking rects elements), then we append rect elements according to the number of rects needed for the data and also the attributes that it have according to the data.  
-
+  
 6. After this we created the tooltip that will show up when we hover on the rect elements in the bar chart.
 ```
  d3.select('#container')
@@ -164,6 +166,7 @@ we select the g we created to contain both the axis of x and y.Then we selectAll
         .attr('id','tooltip');
 ```
 The reason i put this on a div element container so that the position of the tooltip wouldn't be affected if the body element got resize due to the screen. And also set the opacity to 0 in the css. Since we do not want the tooltip to show up unless one of the rect is hovered.  
+  
 7. Then we put a on mouseover and mouseout function on the rects elements we created previously.
 ```
 .on('mouseover', function(d){
@@ -204,6 +207,7 @@ Since i tried to make this as same as possible with the example project from fre
 we select the tooltip we created previously and alter its attributes and style by giving it a left and bottom so its position will be the same as the rects that was hovered. And then we also append the texts of the data of the rect that was hovered.  
 In the mouseout function:  
 We remove the text that was added on the mouseover function and also alter back the opacity of the tooltip to 0.  
+  
 8. Finally we add some small details for the bar charts such as the text gross domestic product and source for more information
 ```
 d3.select('svg').append('text')
