@@ -9,6 +9,13 @@ The projects are:
 4. Creating a Choropleth Map for the United States Educational Attainment
 5. Creating a Treemap Diagram for a Video Game Sales
   
+Technology used:
+1. html
+2. css
+3. javascript
+4. d3.js v5.16.0
+  
+
 ## D3.js Library
 To use the d3.js you can simply put it in your HTML file inside a script tag.  
 Below is the link for the D3.js library:  
@@ -23,6 +30,17 @@ To run the test in any environment you want, you need to use the CDN link provid
 ```<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>```
 
 For each projects it will have its own README file in this repository. That includes the explanation of each code that i wrote.  
+## Link for live demo
+1. US GDP's Bar Chart:
+https://codepen.io/jordyf15/full/RwrzmWP
+2. Professional Bicycle Racing Doping Cases's Scatter Plot:
+https://codepen.io/jordyf15/full/XWdrBMw
+3. Monthly Global Land-Surface Temperature's Heat Map:
+https://codepen.io/jordyf15/full/WNwNZJo
+4. US Educational Attainment's Choropleth Map:
+https://codepen.io/jordyf15/full/LYNEQZQ
+5. Video Game Sale's Tree Map:
+https://codepen.io/jordyf15/full/vYGOGdV
   
 Note:  
 This documentation is created for practice, so it may not be an example of a good documentation but i will try my best. And also each code may not be the best practice since i was still a first year university student and is still learning. I hope this could help other people who might be stuck doing the projects or just wanting to see how other people did their project. Thank you.
