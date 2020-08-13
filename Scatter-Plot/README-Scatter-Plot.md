@@ -25,6 +25,35 @@ The test or user stories that must be passed are:
 ### Dataset
 The dataset that we will need to complete this project are  
 https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json
+  
+The data we receive is an array that contain object for each cases that contain properties related to the doping cases. For Example
+```
+array[
+    0: object{
+            Doping: "Alleged drug use during 1995 due to high hematocrit levels"
+            Name: "Marco Pantani"
+​​            Nationality: "ITA"
+​​            Place: 1
+​​            Seconds: 2210
+​​            Time: "36:50"
+​​            URL: "https://en.wikipedia.org/wiki/Marco_Pantani#Alleged_drug_use"
+​​            Year: 1995
+    }
+    .
+    .
+    .
+    34: object{
+            Doping: ""
+​​            Name: "Nairo Quintana"
+​​            Nationality: "COL"
+​​            Place: 35
+​​            Seconds: 2390
+​​            Time: "39:50"
+​​            URL: ""
+​​            Year: 2013
+    }
+]
+```
 
 ## Structure of the Scatter Plot Graph
 ```

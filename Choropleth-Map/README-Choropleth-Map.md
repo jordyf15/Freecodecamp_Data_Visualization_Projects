@@ -21,6 +21,28 @@ In the fourth project of the Data Visualization Curriculum, we have to make Chor
 There are two datasets that are needed for this project.
 1. US Education Data: https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json
 2. US County Data: https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json
+  
+The first data is an array that each index hold an object that contain properties of each county. For example:
+```
+array: [
+    0: Object{
+        area_name: "Autauga County"
+        bachelorsOrHigher: 21.9
+        fips: 1001
+        state: "AL"
+    }
+    .
+    .
+    .
+    3142: Object{
+        area_name: "Weston County"
+        bachelorsOrHigher: 16.8
+        fips: 56045
+        state: "WY"
+    }
+]
+```
+The second data contain topology type object and coordination to draw the map.
 
 ## Additional library 
 To do this project we need an additonal library to draw the map from the data which provide objects of topology type. So we need to include it in our html file.
@@ -224,7 +246,7 @@ the width and height here is for the svg. While the legendBarDataSet array will 
     .style('stroke','white')
     .style('stroke-width',0.1)
     ```
-    Here we selectAll the path and than in the data method we use the topojson feature to convert the data to so it can be use by the drawPath or the d3.geoPath(). After that it will append path for each data with attributes that the d3.geoPath/drawPath gives. This will draw the map.  
+    Here we selectAll the path and than in the data method we use the topojson feature to convert the data to so it can be use by the drawPath or the d3.geoPath(). After that it will append path for each data with attributes that the d3.geoPath/drawPath gives. This will draw the map. While assigning each attribute please pay attention to the fips and the id of the datasets since it need to matched to display the choropleth map properly.  
   
 17. Creating the on mouseover and mouseout function for hovering the map
     ```

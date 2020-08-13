@@ -23,6 +23,22 @@ The test or user stories that must be passed are:
 ### Dataset
 The dataset that we will need to complete this project are  
 https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json  
+  
+The data we need are located in the .data property of the object that we received. it is an array that hold the data for each date and value in an array. For example:
+```
+object{
+    data: [
+        0: ["1947-01-01", 243.1]
+        1: ["1947-04-01", 246.3]
+        2: ...
+        .
+        .
+        . 
+        275: ["2015-07-01", 18064.7]
+    ]
+    // other properties the object have.
+}
+```
 
 ## Structure of the Bar Chart
 ```

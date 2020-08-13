@@ -25,6 +25,29 @@ https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-fun
 3. Movie Sales:  
 https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json
 
+The data that we receive is an object that contain two properties, the name of the tree map and also the children which is an array that represent each console which hold children that is also an array that each index hold an object for each video games. For example:
+```
+object{
+    children:[
+        0: Object:{
+            name: "Wii"
+            Children:{
+                //object for each game are here
+            }
+        }
+        .
+        .
+        .
+        17: Object:{
+            name: "xOne"
+            Children:{
+                //object for each game are here
+            }
+        } 
+    ]
+}
+```
+
 ## Structure of the Video Game Sales TreeMap
 ```
 <body>

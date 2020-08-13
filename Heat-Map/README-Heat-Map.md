@@ -27,6 +27,29 @@ In the Third project of the Data Visualization curriculum in FreeCodeCamp, we ha
 The dataset that we will need to complete this project are  
 https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json
 
+The data we receive is an object with two properties. Which is the base temperature and monthly variance.
+The base temperature is used to count the temperature of each month and the data that will be used to create the heat map is in monthvariance. It is an array that each index hold an object that contain properties of each month. For example:
+```
+Object{
+    baseTemperature: 8.66
+    monthlyVariance: [
+        0: Object{
+            year:1753,
+            month: 1,
+            variance: -1.366
+        }
+        .
+        .
+        .
+        3152: Object{
+            year: 2015,
+            month: 8,
+            variance: 0.87
+        }
+    ]
+}
+```
+
 ## Structure of the Heat-Map
 ```
 <body>
